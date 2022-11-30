@@ -32,7 +32,7 @@ jobs:
     if: github.ref == 'refs/heads/main' # only publish if commited to the main branch
     steps:
       - name: Retrieve saved Docker image
-        uses: actions/checkout@v2
+        uses: actions/download-artifact@v2
         with:
           name: output
           path: output
@@ -43,5 +43,5 @@ jobs:
           name: PDFs
           body: Dieses Release wurde automatisch erstellt
           gzip: false
-          files: output/[A-Z]*[A-Z]-[A-Z]*[A-Z].pdf
+          files: output/*.pdf
           allow_override: true
