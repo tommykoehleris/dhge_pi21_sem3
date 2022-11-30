@@ -11,6 +11,7 @@ Datenbanken
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Inhaltsverzeichnis**
 
+- [Datenbanken](#datenbanken)
 - [Grundlagen](#grundlagen)
   - [Begriffe](#begriffe)
     - [Vorteile von Datenbanken](#vorteile-von-datenbanken)
@@ -33,11 +34,11 @@ Datenbanken
 - [Sprachschnittstellen zu DBMS](#sprachschnittstellen-zu-dbms)
   - [Grundlagen von Datenmanipulations- und Abfragesprachen](#grundlagen-von-datenmanipulations--und-abfragesprachen)
     - [Relationenalgebra-Sprachen](#relationenalgebra-sprachen)
-    - [Relationenkalkül-Sprachen](#relationenkalk%C3%BCl-sprachen)
+    - [Relationenkalkül-Sprachen](#relationenkalkül-sprachen)
     - [Abbildungsorientierte Sprachen](#abbildungsorientierte-sprachen)
     - [Grafikorientierte Sprachen](#grafikorientierte-sprachen)
   - [SQL](#sql)
-    - [Überblick](#%C3%BCberblick)
+    - [Überblick](#überblick)
       - [Namenskonventionen](#namenskonventionen)
       - [Sprachliche Unterschiede im Vergleich zur Programmiersprache C](#sprachliche-unterschiede-im-vergleich-zur-programmiersprache-c)
 
@@ -75,7 +76,7 @@ festen Integrationsvorschriften (Zuordnung zu Objekt- und Beziehungstypen) und O
 - Definition der eigentlichen Daten, Zugriffshilfen (bspw. Indices) und Benutzersichten (views)
 - Datenmanipulation: Retrieval, Update
 - Datenverwaltung: Laden und Entladen der DB, Modifizieren von Speicherstrukturen, Reorganisation
-- Datensicherheit: Zugriffskontrolle, Sicherung der Integrität, Synchronisation von Mehrfachzugriffen
+- Datensicherheit: Zugriffskontrolle, Sicherung der Integrität und Synchronisation von Mehrfachzugriffen
 
 ## Architekturen von DBMS
 
