@@ -1,4 +1,4 @@
-<!----------
+﻿<!----------
 title: "IT-Trends"
 date: "Semester 3"
 keywords: [IT-Trends, DHGE, Semester 3]
@@ -179,6 +179,11 @@ Alle diese Punkte bedingen neue Expertisen bei den Mitarbeitern in den betreffen
 Sind Architekturmuster in der IT, bei der die Anwendungssoftware aus vielen voneinander unabhängigen Prozessen zusammengesetzt wird.
 Damit diese Prozesse miteinander kombiniert werden können, gibt es eine unabhängige Programmierschnittstelle.
 Dabei wird von **Diensten** gesprochen, die entkoppelt sind. Der Aufbau ist modular.
+
+- kleines, ausführbares Programm, direkt auf Betriebssystem ausgeführt 
+(inkl. Abhängigkeiten und Konfiguration)
+
+klein |=| Programm kann EINEN spezifischen Sachverhalt lösen
 
 Das Drei-Schichten-Modell spielen dabei eine Rolle:
 
@@ -531,3 +536,17 @@ $dbtilde{f}(z_{2}, param{3})= y$
 
 Begriff des Deep-Learnings kommt daher, dass bei der Konstruktion viele versteckte Schichten verwendet werden. 
 Die verschiedenen Layer ermöglichen den Einsatz verschiedener Features/Funktionen. 
+
+# Docker
+Ergänzungen aus OneNote hier einfügen...
+
+**Vorteile**
+- Ressourcen schonend
+- gut erweiterbar
+
+**Nachteile**
+- Lernkurve (Erlernen von Docker-File-Erstellung usw.)
+- Dokumentation nach Entwicklung (Ändern, speichern, committen) kann u.U. nicht zum Inhalt passen
+
+
+

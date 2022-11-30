@@ -1,4 +1,4 @@
-<!----------
+﻿<!----------
 title: "Systemanalyse"
 date: "Semester 3"
 keywords: [Systemanalyse, DHGE, Semester 3]
@@ -551,7 +551,8 @@ Angenommen ... <Vork.> wenn ... <Aktion> dann ... <Ergebnis>
 - muss eine "Brücke" zwischen Business und Development herstellen
 - muss ROI (Return of Investment) gewährleisten
 - ist die Schnittstelle zum Kunden -> muss die Kundenbedürfnisse verstehen und einordnen
-- **Value:** muss Kriterien für den Value definieren und ihn erhöhen -> Was? Warum?
+- **Value:** muss Kriterien für den Value definieren und ihn erhöhen -> Was? Warum? 
+$\rightarrow$ i.d.R. in T-Shirt Größen S, M, L, XL usw.
 - ist für Sprint Reviews verantwortlich
 - muss Backlog Prioritäten setzen
 
@@ -975,7 +976,7 @@ $\Rightarrow$ **Achtung**: Aufwand für das Zusammenführen beachten!
 $\Rightarrow$ d.h. Story-Points
 
 - Kategorien werden angestrebt
-- Basis wird festgelegt, i.d.R. mit 1 Story Point
+- Basis (Referenzaufgabe) wird festgelegt, i.d.R. mit 1 Story Point
 - Spaßfaktor $\Rightarrow$ Teamgeist
 - i.d.R. für $7 \pm 2\,\mathrm{MA}$ konzipiert
 - Kartenset (Kartenwert von unten aus meist Fibonacci, höher dann gröber)
@@ -997,25 +998,33 @@ $\Rightarrow$ d.h. Story-Points
 4. Minimal + Maximal begründen ihre Wahl
    
    *alle* Anderen haben Redeverbot
+   $\rightarrow$ Schätzung immer besser und näher am tatsächlichen Wert
+   
 5. zurück zu 2. $\rightarrow$ i.d.R. maximal 2 Iterationen
 
 > bei Einigkeit nach 3. kann direkt zur nächsten Aufgabe gesprungen werden (also 1.)
 
-**Eigenschaften**
+**Eigenschaften/Vorteile:**
 
-1. Teams sind besser als Experten (i.d.R.)
-2. Diversität in Gruppen wird benötigt
+- **Teams sind besser als Experten (i.d.R.)**
+- Publikums-Frage wird zu 95% richtig beantwortet
+- **keine $\alpha$-Tier-Meinungen in der Schätzung**
+- keine Autoritäts-Meinungen dabei
+- alle sind mit im Boot $\Rightarrow$ Engagement
+- keine Planung sondern Schätzung!
+- nur Debatten bei unterschiedlichen Meinungen
+- alle haben eine Stimme
+- **viel Kommunikation $\rightarrow$ Wissenstransfer**
+- Story-Points pro Mitarbeiter abbildbar, keine Zeit Schätzung
 
-   $\rightarrow$ je unterschiedlicher das Wissen in der Gruppe, desto smarter ist die Gruppe
+**Nachteile:**
 
-3. Publikums-Frage wird zu 95% richtig beantwortet
-4. keine $\alpha$-Tier-Meinungen in der Schätzung
-5. keine Autoritäts-Meinungen dabei
-6. alle sind mit im Boot $\Rightarrow$ Engagement
-7. zeitaufwendig
-8. keine Planung sondern Schätzung!
-9. nur Debatten bei unterschiedlichen Meinungen
-10. alle haben eine Stimme
+- **zeitaufwändig**
+- **keine Stunden/Zeit-Schätzung**
+- fähiger Scrum-Master notwendig
+- für Team ohne Fachwissen nutzlos
+- **Diversität in Gruppen wird benötigt**
+$\rightarrow$ je unterschiedlicher das Wissen in der Gruppe, desto smarter ist die Gruppe
 
 ### High-Low-Showdown
 
