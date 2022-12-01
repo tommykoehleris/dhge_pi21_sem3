@@ -11,14 +11,15 @@ Systemanalyse
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Inhaltsverzeichnis**
 
-- [Einführung / Überblick](#einf%C3%BChrung--%C3%BCberblick)
+- [Systemanalyse](#systemanalyse)
+- [Einführung / Überblick](#einführung--überblick)
   - [User Story Format](#user-story-format)
-  - [Was gehört alles zur Systemanalyse?](#was-geh%C3%B6rt-alles-zur-systemanalyse)
-- [Regeln für Software-Entwicklung](#regeln-f%C3%BCr-software-entwicklung)
+  - [Was gehört alles zur Systemanalyse?](#was-gehört-alles-zur-systemanalyse)
+- [Regeln für Software-Entwicklung](#regeln-für-software-entwicklung)
   - [(1) Klartext](#1-klartext)
     - [Wasserfallmodell](#wasserfallmodell)
     - [Agil](#agil)
-  - [(2) Gründliche Vertragsgestaltung](#2-gr%C3%BCndliche-vertragsgestaltung)
+  - [(2) Gründliche Vertragsgestaltung](#2-gründliche-vertragsgestaltung)
     - [Wasserfallmodell](#wasserfallmodell-1)
     - [Agil](#agil-1)
   - [(3) Wandelnde Anforderungen: Wie gehe ich damit um?](#3-wandelnde-anforderungen-wie-gehe-ich-damit-um)
@@ -27,10 +28,10 @@ Systemanalyse
   - [Vorgehensmodelle](#vorgehensmodelle)
     - [Phasenmodell](#phasenmodell)
     - [Iteriertes Phasenmodell](#iteriertes-phasenmodell)
-    - [Evolutionäre SW-Entwicklung](#evolution%C3%A4re-sw-entwicklung)
+    - [Evolutionäre SW-Entwicklung](#evolutionäre-sw-entwicklung)
     - [Spiralen Modell](#spiralen-modell)
     - [V-Modell](#v-modell)
-    - [Eine Ausprägung des V-Modells: "V-Modell XT"](#eine-auspr%C3%A4gung-des-v-modells-v-modell-xt)
+    - [Eine Ausprägung des V-Modells: "V-Modell XT"](#eine-ausprägung-des-v-modells-v-modell-xt)
     - [Extreme Programming (XP)](#extreme-programming-xp)
 - [SCRUM](#scrum)
   - [Empirische Prozess Kontrolle](#empirische-prozess-kontrolle)
@@ -49,7 +50,7 @@ Systemanalyse
     - [Definition of Done](#definition-of-done)
     - [DoR: Definition of Ready](#dor-definition-of-ready)
   - [SCRUM-Manifest](#scrum-manifest)
-    - [Häufige / gern gemachte Fehler bezüglich des Manifests](#h%C3%A4ufige--gern-gemachte-fehler-bez%C3%BCglich-des-manifests)
+    - [Häufige / gern gemachte Fehler bezüglich des Manifests](#häufige--gern-gemachte-fehler-bezüglich-des-manifests)
   - [Vor- und Nachteile von SCRUM](#vor--und-nachteile-von-scrum)
   - [SCRUM-Ban als SCRUM Derivat](#scrum-ban-als-scrum-derivat)
 - [Story Board](#story-board)
@@ -59,21 +60,22 @@ Systemanalyse
   - [4 Prozess-Schritte](#4-prozess-schritte)
   - [Hinweise](#hinweise)
 - [Requirement Engineering / Aufwandsanalyse](#requirement-engineering--aufwandsanalyse)
-  - [Aufwandsschätzung](#aufwandssch%C3%A4tzung)
+  - [Aufwandsschätzung](#aufwandsschätzung)
     - [LOC (Lines of Code) als Basis im klassischen Fall](#loc-lines-of-code-als-basis-im-klassischen-fall)
     - [weitere Faktoren](#weitere-faktoren)
     - [Magisches Dreieck / Teufelsquadrat](#magisches-dreieck--teufelsquadrat)
-  - [Empirische Schätzung](#empirische-sch%C3%A4tzung)
-    - [Expertenschätzung](#expertensch%C3%A4tzung)
+  - [Empirische Schätzung](#empirische-schätzung)
+    - [Expertenschätzung](#expertenschätzung)
     - [Delphi-Methode](#delphi-methode)
     - [Divide et Impera (Teile und Hersche)](#divide-et-impera-teile-und-hersche)
     - [SCRUM-Poker](#scrum-poker)
     - [High-Low-Showdown](#high-low-showdown)
-  - [Algorithmische Schätzverfahren](#algorithmische-sch%C3%A4tzverfahren)
+  - [Algorithmische Schätzverfahren](#algorithmische-schätzverfahren)
     - [COCOMO](#cocomo)
+    - [COCOMO $II$ $\\copyright$ Boehm](#cocomo-ii-copyright-boehm)
     - [Function-Point-Methode](#function-point-methode)
 - [Objektorientierung](#objektorientierung)
-  - [Überblick](#%C3%BCberblick)
+  - [Überblick](#überblick)
     - [UML: Unified Modelling Language](#uml-unified-modelling-language)
     - [Diagramme](#diagramme)
     - [Eigenschaften der Objektorientierung](#eigenschaften-der-objektorientierung)
@@ -82,7 +84,7 @@ Systemanalyse
   - [Klassen-Diagramm mit Assoziationen](#klassen-diagramm-mit-assoziationen)
   - [Verhaltensdiagramme](#verhaltensdiagramme)
   - [Zustandsdiagramme](#zustandsdiagramme)
-  - [Aktivitätsdiagramm](#aktivit%C3%A4tsdiagramm)
+  - [Aktivitätsdiagramm](#aktivitätsdiagramm)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -1098,7 +1100,18 @@ Präzisierung der Schätzung:
 - Unternehmensspezifische Kostenfaktoren
 - Projektspezifische Kostenfaktoren
 
+### COCOMO $II$ $\copyright$ Boehm
+
+$MM=2,45\cdot(\frac{LOC}{1000})^{(Skalierungsfaktoren)}$
+
 $MM_{korrigiert}=K_u \cdot K_p \cdot MM$
+
+**Einflussfaktoren**
+- Skalierungsfaktoren
+- Flexibilität
+- Team
+- Technologie
+- Risiko
 
 **Kostentreiber**
 - Zuverlässigkeit
@@ -1159,7 +1172,7 @@ Funktion Point Roh-Wert wird mit dieser Tabelle verrechnet und führt so zum Ges
 $Function Points = FP_{Roh}* Korrekturfaktoren$
 
 - Bis zu 14 Einflussfaktoren als Korrekturfaktoren:
-
+  
 > **Achtung!** falls Aufwand pro Funktion-Point bekannt $\Rightarrow$ Aufwand "berechenbar"
 
 - Beispiel Faustregel von Jones:
