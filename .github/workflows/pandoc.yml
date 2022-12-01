@@ -16,7 +16,6 @@ jobs:
           mkdir .old &&
           rsync -vr ./* .old/ --exclude .old &&
           for f in [A-Z]*[A-Z]-[A-Z]*[A-Z]/README.md; do awk '/!\[/{gsub(/<!--/,"{");gsub(/-->/,"}")};{gsub("<!--pagebreak-->","\\pagebreak")};{gsub("<!--newpage-->","\\newpage")};{gsub("<!--clearpage-->","\\clearpage")};{gsub("<!----------","---")};{gsub("---------->","...")};{print}' .old/${f} > ${f} ; done
-          awk '/!\[/{gsub(/<!--/,"{");gsub(/-->/,"}")};{gsub("<!--pagebreak-->","\\pagebreak")};{gsub("<!--newpage-->","\\newpage")};{gsub("<!--clearpage-->","\\clearpage")};{gsub("<!----------","---")};{gsub("---------->","...")};{print}' .old/RES-GUENTHER/extra/pruefungsfragen.md > RES-GUENTHER/extra/pruefungsfragen.md;
       - run: |
           mkdir output
       - uses: docker://rstropek/pandoc-latex:latest # generate pdfs using pandoc
