@@ -682,7 +682,7 @@ Ergänzungen aus OneNote hier einfügen...
 - wird benötigt um zu garantieren, dass ein öffentlicher Schlüssel von einer bestimmten Quelle stammt
 - wird öffentlicher Schlüssel durch Mittelsmann manipuliert, wird die verschlüsselte Nachricht für diesen lesbar
 - digitale Signatur = Unterschrift $\rightarrow$ digitales Zertifikat = Personalausweis
-- öffentlicher Schlüssel ist echt, wenn er durch andere Instanz (= Vertrauenswürdigkeit bestätigt durch vorhergehende Instanz) bestätigt wird $\rightarrow$ Baumstruktur
+- öffentlicher Schlüssel ist echt, wenn er durch andere Instanz (= Vertrauenswürdigkeit bestätigt durch übergeordnete Instanz) bestätigt wird $\rightarrow$ Baumstruktur
 
 ## Blockchain
 
@@ -696,9 +696,10 @@ Ergänzungen aus OneNote hier einfügen...
 - Blockchain ist die zentrale Technologie hinter vielen Kryptowährungen wie Bitcoin
 - Verteilung der Blockchain in einem Peer-to-Peer Netzwerk (jeder Peer besitzt vollständige Kopie, vgl. dezentrale Datenbank)
 - Miner fassen Transaktionen zu Blöcken zusammen und propagieren diese im Peer-to-Peer Netzwerk
-- Damit ein Block akzeptiert wird, muss dieser einen Hash besitzen, der eine bestimmte Bedingung erfüllt (= Mining-Schwierigkeit, sehr rechenintensiv)
+- Damit ein Block akzeptiert wird, muss dieser einen Hash besitzen, der zu einem bestimmten Teil mit dem ursprünglichen Hash des Blocks übereinstimmt (quasi 1 Hash gebildet vom ursprünglichen Block $\rightarrow$ an Block angehängt, dann wird eine Information angehängt und das Paket wieder neu gehasht $\rightarrow$ dieser "Gesamt" Hash muss den alten Hash beinhaltet/bzw. übereinstimmt) (= Mining-Schwierigkeit, sehr rechenintensiv)
+- $\rightarrow$ wenn man manipulieren wöllte, müsste man die ganze Kette neu-hashen $\rightarrow$ Sicherheit
 - Anpassung des Schwierigkeitsgrad des Minings erfolgt alle zwei Wochen (je mehr Peers, umso schwieriger wird das Mining)
-- diejenige Node die zuerst einen Block mit einem passenden Hash generiert und der vom Netzwerk validiert wird, wird mit 'neuen' Bitcoin belohnt (Belohnung halbiert sich alle 4 Jahre - aktuell 6,25 BTC)
+- diejenige Node die zuerst einen Block mit einem passenden Hash generiert und der vom Netzwerk validiert wird, wird mit 'neuen' Bitcoin belohnt (Belohnung halbiert sich alle 4 Jahre)
 - Neue Blöcke werden etwa alle 10 Minuten erzeugt
 
 > Bitcoin ermöglicht es kryptografisch gesicherte, direkte Transaktionen ohne zentrale Vermittler in einem dezentralen Peer-to-Peer Netzwerk durchzuführen
@@ -707,7 +708,7 @@ Ergänzungen aus OneNote hier einfügen...
 
 - dezentral, unabhängig von Zentralbanken
 - sicherer Wertspeicher (maximale Anzahl von BTC begrenzt)
-- freie weltweite Transaktionen, ohne Sanktionen und hohe Transaktionskosten
+- freie weltweite Transaktionen, ohne Sanktionen und hohe Transaktionskosten (stimmt nicht ganz, für jede Transaktion gibt es GAS Fees)
 
 **Nachteile**
 
@@ -715,4 +716,4 @@ Ergänzungen aus OneNote hier einfügen...
 - irreversible Transaktionen (Diebstahl, ...)
 - legt alle Transaktionen offen (Nachverfolgbarkeit vs. Privatsphäre)
 - Nutzung für illegale Transaktionen möglich (Silk Road, ...)
-- hoher Stromverbrauch des verbreiteten Mining-Algorithmus
+- hoher Stromverbrauch des verbreiteten Mining-Algorithmus (bei Proof of Work)
