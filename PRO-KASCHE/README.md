@@ -31,6 +31,9 @@ IT-Trends
 	- [API Gateways bei Microservices](#api-gateways-bei-microservices)
 	- [Microservice Architektur Entwurf](#microservice-architektur-entwurf)
 		- [Beispiel](#beispiel)
+	- [Anforderungen an Microservices](#anforderungen-an-microservices)
+	- [Kein Microservice anwenden wenn...](#kein-microservice-anwenden-wenn)
+	- [Kriterien für eine geschickt gewählte Microservice Architektur](#kriterien-für-eine-geschickt-gewählte-microservice-architektur)
 - [Service-Orientierte-Architekturen (SOA)](#service-orientierte-architekturen-soa)
 	- [REST - Schnittstellen - Representational State Transfer](#rest---schnittstellen---representational-state-transfer)
 		- [Eigenschaften von REST-Schnittstellen](#eigenschaften-von-rest-schnittstellen)
@@ -55,6 +58,14 @@ IT-Trends
 		- [Erkennen ohne Lernen](#erkennen-ohne-lernen)
 		- [Erkennen durch Feature-Design](#erkennen-durch-feature-design)
 - [Docker](#docker)
+- [Blockchain und Verschlüsselung](#blockchain-und-verschlüsselung)
+	- [Hashing](#hashing)
+		- [Hashes knacken](#hashes-knacken)
+	- [Verschlüsselung](#verschlüsselung)
+		- [Digitale Signaturen](#digitale-signaturen)
+		- [Digitale Zertifikat](#digitale-zertifikat)
+	- [Blockchain](#blockchain)
+		- [Bitcoin (Kryptowährungen)](#bitcoin-kryptowährungen)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -298,6 +309,27 @@ $+$ Bewertung der einzelnen Entscheidungen (z.B. Wieso JSON Format? Was bringt d
 ### Beispiel
 
 ![MS-Entwurf Beispiel](assets/ms-entwurf-beispiel.png)<!-- width=350px -->
+
+## Anforderungen an Microservices
+- Unabhängiges Entwicklerteam
+- schnell und unabhängig auslieferbar
+- funktional und datenmässig abgegrenzt (eine Aufgabe verständlich lösen)
+- Verfügbarkeit
+- technologische Wahlfreiheit (Freiheit wie etwas implementiert wird / welche Sprache verwendet wird)
+
+## Kein Microservice anwenden wenn...
+- geringe Komplexität
+- keine Resilienz notwendig
+- keine Skalierbarkeit
+- komplexe Datenoperationen über Service-Grenzen hinweg
+
+## Kriterien für eine geschickt gewählte Microservice Architektur
+- Anzahl der Verantwortlichkeiten
+- Anzahl der Services
+- FAN-OUT pro Service zählen
+  - gibt es einen mit großem FAN-OUT?
+  - $\rightarrow$ FAN-OUT: Zugriff auf externe Datenbestände
+- Anzahl Testfälle pro Service
 
 # Service-Orientierte-Architekturen (SOA)
 
@@ -592,3 +624,95 @@ Ergänzungen aus OneNote hier einfügen...
 **Nachteile**
 - Lernkurve (Erlernen von Docker-File-Erstellung usw.)
 - Dokumentation nach Entwicklung (Ändern, speichern, committen) kann u.U. nicht zum Inhalt passen
+
+# Blockchain und Verschlüsselung
+
+## Hashing
+
+- **Hashfunktion** = Zuordnung von beliebig großen Eingabemenge (Schlüssel, beliebig langer String) auf eine kleinere Zielmenge fester Länge (Hashwerte)
+- Hashwerte sind einfach zu berechnen
+- Umkehroperation sehr komplex (Rekonstruktion der Eingabe unmöglich)
+
+**Algorithmen**
+
+- SHA256: Secure Hashing Algorithm
+- MD1: Message Digest 1 (veraltet!)
+- MD5: Message Digest 5 (veraltet!)
+- 
+
+**Anwendung**
+
+- Speichern von Passwörtern
+- Integrität von Dateien sicherstellen
+
+
+### Hashes knacken
+
+- Bruteforce $\rightarrow$ sehr rechenintensiv (eventuell Versuche begrenzt)
+- Speichereffiziente Umkehroperation über **Rainbow-Table** (aufwendig vorher viele mögliche Hashes berechnen)
+- Wird durch Salting (Erweitern der Zeichenfolge) verhindert
+
+## Verschlüsselung
+
+- **symmetrische Verschlüsselung:** gleicher Schlüssel zum ver- und entschlüsseln
+  - schnell, effizient durch Hardwarebeschleunigung ausführbar
+- **asymmetrische Verschlüsselung:** privater und öffentlicher Schlüssel (meist für Entschlüsseln / Verschlüsseln)
+  - z.B. End-to-End verschlüsselte Chat-Programme, PGP, Digitale Signaturen
+  - $\rightarrow$ Dateien/Nachrichten die mit dem öffentlichen Schlüssel verschlüsselt werden, können nur noch mit dem privaten 
+	Schlüssel entschlüsselt werden
+	- Ransomware (Verschlüsselungsangriffe) nutzen genau das aus
+
+### Digitale Signaturen
+
+- Kombination aus Hash und Signatur $\rightarrow$ Absicherung von Authentizität
+- Erstellung: Hashwert der Nachricht berechnen $\rightarrow$ Hash mit privatem Schlüssel verschlüsseln (= Signatur)
+- Übertragen wird die Nachricht zusammen mit dem verschlüsselten Hashwert
+- Absicherung: Hash mit öffentlichem Schlüssel entschlüsseln $\rightarrow$ Hashwert der Nachricht selbst berechnen und mit dem Entschlüsselten vergleichen
+- privater und öffentlicher Schlüssel besitzen dabei umgekehrte Funktionalität
+
+**Ablauf**
+1. Hash-Wert wird gebildet
+2. Hash-Wert wird mit **private Key** verschlüsselt
+3. TXT mit verschlüsseltem HASH übertragen
+4. verschlüssleter Hash-Wert mit **public Key** entschlüsselt
+5. passt dieser HASH zum übertragenen Text? 
+
+### Digitale Zertifikat
+
+- wird benötigt um zu garantieren, dass ein öffentlicher Schlüssel von einer bestimmten Quelle stammt
+- wird öffentlicher Schlüssel durch Mittelsmann manipuliert, wird die verschlüsselte Nachricht für diesen lesbar
+- digitale Signatur = Unterschrift $\rightarrow$ digitales Zertifikat = Personalausweis
+- öffentlicher Schlüssel ist echt, wenn er durch andere Instanz (= Vertrauenswürdigkeit bestätigt durch vorhergehende Instanz) bestätigt wird $\rightarrow$ Baumstruktur
+
+## Blockchain
+
+- Blockchain = kontinuierliche erweiterbare Verknüpfung von Datensätzen (= Blöcke)
+- jeder Block beinhaltet Transaktionsdaten und den Hashwert des vorhergehenden Blocks
+- Reihenfolge und Inhalt der Blöcke durch Hashwerte nicht manipulierbar
+- Anwendung in Bereichen, in denen Rückverfolgbarkeit und Sicherheit nötig ist
+
+### Bitcoin (Kryptowährungen)
+
+- Blockchain ist die zentrale Technologie hinter vielen Kryptowährungen wie Bitcoin
+- Verteilung der Blockchain in einem Peer-to-Peer Netzwerk (jeder Peer besitzt vollständige Kopie, vgl. dezentrale Datenbank)
+- Miner fassen Transaktionen zu Blöcken zusammen und propagieren diese im Peer-to-Peer Netzwerk
+- Damit ein Block akzeptiert wird, muss dieser einen Hash besitzen, der eine bestimmte Bedingung erfüllt (= Mining-Schwierigkeit, sehr rechenintensiv)
+- Anpassung des Schwierigkeitsgrad des Minings erfolgt alle zwei Wochen (je mehr Peers, umso schwieriger wird das Mining)
+- diejenige Node die zuerst einen Block mit einem passenden Hash generiert und der vom Netzwerk validiert wird, wird mit 'neuen' Bitcoin belohnt (Belohnung halbiert sich alle 4 Jahre - aktuell 6,25 BTC)
+- Neue Blöcke werden etwa alle 10 Minuten erzeugt
+
+> Bitcoin ermöglicht es kryptografisch gesicherte, direkte Transaktionen ohne zentrale Vermittler in einem dezentralen Peer-to-Peer Netzwerk durchzuführen
+
+**Vorteile**
+
+- dezentral, unabhängig von Zentralbanken
+- sicherer Wertspeicher (maximale Anzahl von BTC begrenzt)
+- freie weltweite Transaktionen, ohne Sanktionen und hohe Transaktionskosten
+
+**Nachteile**
+
+- hohe Eigenverantwortung der Nutzer (ohne Private-Key kein Zugriff auf Wallet)
+- irreversible Transaktionen (Diebstahl, ...)
+- legt alle Transaktionen offen (Nachverfolgbarkeit vs. Privatsphäre)
+- Nutzung für illegale Transaktionen möglich (Silk Road, ...)
+- hoher Stromverbrauch des verbreiteten Mining-Algorithmus
