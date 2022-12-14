@@ -1,4 +1,4 @@
-<!----------
+﻿<!----------
 title: "IT-Trends"
 date: "Semester 3"
 keywords: [IT-Trends, DHGE, Semester 3]
@@ -11,45 +11,61 @@ IT-Trends
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Inhaltsverzeichnis**
 
+- [IT-Trends](#it-trends)
 - [Einleitung](#einleitung)
-  - [IT-Trends nach IDC](#it-trends-nach-idc)
-  - [Disruptionen](#disruptionen)
-  - [Agile Methoden](#agile-methoden)
-  - [Cloud Computing](#cloud-computing)
-    - [Edge Computing](#edge-computing)
-  - [Künstliche Intelligenz](#k%C3%BCnstliche-intelligenz)
-  - [Agile Entwicklung und DevOps-Methoden als Schlüssel für hohe Entwicklungsgeschwindigkeit](#agile-entwicklung-und-devops-methoden-als-schl%C3%BCssel-f%C3%BCr-hohe-entwicklungsgeschwindigkeit)
-  - [IT-Sicherheit](#it-sicherheit)
+	- [IT-Trends nach IDC](#it-trends-nach-idc)
+	- [Disruptionen](#disruptionen)
+	- [Agile Methoden](#agile-methoden)
+	- [Cloud Computing](#cloud-computing)
+		- [Edge Computing](#edge-computing)
+	- [Künstliche Intelligenz](#künstliche-intelligenz)
+	- [Agile Entwicklung und DevOps-Methoden als Schlüssel für hohe Entwicklungsgeschwindigkeit](#agile-entwicklung-und-devops-methoden-als-schlüssel-für-hohe-entwicklungsgeschwindigkeit)
+	- [IT-Sicherheit](#it-sicherheit)
 - [Technologien der dritten Plattform IT](#technologien-der-dritten-plattform-it)
 - [Microservices und REST-Schnittstellen](#microservices-und-rest-schnittstellen)
-  - [Microservices](#microservices)
-  - [Dienste](#dienste)
-  - [Technologie](#technologie)
-  - [Pro/Contra Microservices](#procontra-microservices)
-  - [Wer verwendet Microservices?](#wer-verwendet-microservices)
+	- [Microservices](#microservices)
+	- [Dienste](#dienste)
+	- [Technologie](#technologie)
+	- [Pro/Contra Microservices](#procontra-microservices)
+	- [Wer verwendet Microservices?](#wer-verwendet-microservices)
+	- [API Gateways bei Microservices](#api-gateways-bei-microservices)
+	- [Microservice Architektur Entwurf](#microservice-architektur-entwurf)
+		- [Beispiel](#beispiel)
+	- [Anforderungen an Microservices](#anforderungen-an-microservices)
+	- [Kein Microservice anwenden wenn...](#kein-microservice-anwenden-wenn)
+	- [Kriterien für eine geschickt gewählte Microservice Architektur](#kriterien-für-eine-geschickt-gewählte-microservice-architektur)
 - [Service-Orientierte-Architekturen (SOA)](#service-orientierte-architekturen-soa)
-  - [REST - Schnittstellen - Representational State Transfer](#rest---schnittstellen---representational-state-transfer)
-    - [Eigenschaften von REST-Schnittstellen](#eigenschaften-von-rest-schnittstellen)
-    - [Aufbau von REST-Anfragen](#aufbau-von-rest-anfragen)
-    - [Übung](#%C3%BCbung)
+	- [REST - Schnittstellen - Representational State Transfer](#rest---schnittstellen---representational-state-transfer)
+		- [Eigenschaften von REST-Schnittstellen](#eigenschaften-von-rest-schnittstellen)
+		- [Aufbau von REST-Anfragen](#aufbau-von-rest-anfragen)
+		- [Übung](#übung)
 - [Cloud Computing](#cloud-computing-1)
-  - [Überblick](#%C3%BCberblick)
-  - [Ursprung: Parallelisierung](#ursprung-parallelisierung)
-    - [Cluster-Computing](#cluster-computing)
-  - [GRID-Computing](#grid-computing)
-  - [Warum (keine) Cloud](#warum-keine-cloud)
-  - [Anwendungsmodelle](#anwendungsmodelle)
-  - [IT-Aufbau](#it-aufbau)
-  - [AWS-Einführung](#aws-einf%C3%BChrung)
-    - [S3 - Simple Storage Service](#s3---simple-storage-service)
-    - [AWSCLI einrichten](#awscli-einrichten)
-    - [Kostenberechnung AWS](#kostenberechnung-aws)
-    - [Virtuelle Rechner im AWS anlegen](#virtuelle-rechner-im-aws-anlegen)
+	- [Überblick](#überblick)
+	- [Ursprung: Parallelisierung](#ursprung-parallelisierung)
+		- [Cluster-Computing](#cluster-computing)
+	- [GRID-Computing](#grid-computing)
+	- [Warum (keine) Cloud](#warum-keine-cloud)
+	- [Anwendungsmodelle](#anwendungsmodelle)
+	- [IT-Aufbau](#it-aufbau)
+	- [AWS-Einführung](#aws-einführung)
+		- [S3 - Simple Storage Service](#s3---simple-storage-service)
+		- [AWSCLI einrichten](#awscli-einrichten)
+		- [Kostenberechnung AWS](#kostenberechnung-aws)
+		- [Virtuelle Rechner im AWS anlegen](#virtuelle-rechner-im-aws-anlegen)
 - [Machine Learning - KI, neuronale Netzwerke, ...](#machine-learning---ki-neuronale-netzwerke-)
-  - [Einsatzgebiete](#einsatzgebiete)
-  - [Mathe-Perspektive](#mathe-perspektive)
-    - [Erkennen ohne Lernen](#erkennen-ohne-lernen)
-    - [Erkennen durch Feature-Design](#erkennen-durch-feature-design)
+	- [Einsatzgebiete](#einsatzgebiete)
+	- [Mathe-Perspektive](#mathe-perspektive)
+		- [Erkennen ohne Lernen](#erkennen-ohne-lernen)
+		- [Erkennen durch Feature-Design](#erkennen-durch-feature-design)
+- [Docker](#docker)
+- [Blockchain und Verschlüsselung](#blockchain-und-verschlüsselung)
+	- [Hashing](#hashing)
+		- [Hashes knacken](#hashes-knacken)
+	- [Verschlüsselung](#verschlüsselung)
+		- [Digitale Signaturen](#digitale-signaturen)
+		- [Digitale Zertifikat](#digitale-zertifikat)
+	- [Blockchain](#blockchain)
+		- [Bitcoin (Kryptowährungen)](#bitcoin-kryptowährungen)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -180,6 +196,11 @@ Sind Architekturmuster in der IT, bei der die Anwendungssoftware aus vielen vone
 Damit diese Prozesse miteinander kombiniert werden können, gibt es eine unabhängige Programmierschnittstelle.
 Dabei wird von **Diensten** gesprochen, die entkoppelt sind. Der Aufbau ist modular.
 
+- kleines, ausführbares Programm, direkt auf Betriebssystem ausgeführt 
+(inkl. Abhängigkeiten und Konfiguration)
+
+klein |=| Programm kann EINEN spezifischen Sachverhalt lösen
+
 Das Drei-Schichten-Modell spielen dabei eine Rolle:
 
 1. GUI
@@ -245,6 +266,71 @@ Dazu muss ein **Load Balancer** die Anfragen beispielsweise an diejenigen MS mit
 - Netflix
 - Zalando
 
+## API Gateways bei Microservices
+
+![API-Gateway Aufbau](assets/API-Gateways.png)<!-- width=350px -->
+
+Client greift auf API Gateway zu, API Gateway ist an verteilte Struktur (z.B. aus Microservices usw.) angeschlossen.
+
+**Nachteile**
+- Ressourcen-Engpässe beim API-Gateway möglich --> Nadeloehr Problem bei Skalierung
+- Single Point of Failure (Wenn API Gateway ausfällt)
+- Zusatzaufwand
+- Netzwerklast
+
+## Microservice Architektur Entwurf
+
+**Ziel**: abgegrenzte Aufgabe soll übernommen werden
+
+**IST**-Stand: komplexe Beziehungsgeflächte
+
+**Theorie-Lösung**: Domänen-Analyse (Zuständigkeitsbereiche suchen)
+
+**1. Grobe Aufteilung:**
+- Fachbereiche --> Aufgaben im Bereich suchen --> Aufgaben einzeln in Microservices abbilden
+  
+**2. Macro-Architektur entwerfen:**
+- Server festlegen
+- Netzwerkverteilung
+- Protokoll (HTTP)
+- APIs
+- Austausch-Format (JSON, XML)
+
+$+$ Bewertung der einzelnen Entscheidungen (z.B. Wieso JSON Format? Was bringt das für Vorteile?)
+  
+**3. Festlegen von Randbedingungen**
+- Pakettierung
+- Installation
+- Konfiguration
+- Logging/Monitoring
+- Sicherheits-Aspekte
+- unterschiedliche Anforderungskapazitäten 
+
+### Beispiel
+
+![MS-Entwurf Beispiel](assets/ms-entwurf-beispiel.png)<!-- width=350px -->
+
+## Anforderungen an Microservices
+- Unabhängiges Entwicklerteam
+- schnell und unabhängig auslieferbar
+- funktional und datenmässig abgegrenzt (eine Aufgabe verständlich lösen)
+- Verfügbarkeit
+- technologische Wahlfreiheit (Freiheit wie etwas implementiert wird / welche Sprache verwendet wird)
+
+## Kein Microservice anwenden wenn...
+- geringe Komplexität
+- keine Resilienz notwendig
+- keine Skalierbarkeit
+- komplexe Datenoperationen über Service-Grenzen hinweg
+
+## Kriterien für eine geschickt gewählte Microservice Architektur
+- Anzahl der Verantwortlichkeiten
+- Anzahl der Services
+- FAN-OUT pro Service zählen
+  - gibt es einen mit großem FAN-OUT?
+  - $\rightarrow$ FAN-OUT: Zugriff auf externe Datenbestände
+- Anzahl Testfälle pro Service
+
 # Service-Orientierte-Architekturen (SOA)
 
 ![Service-Orientierte-Architektur](assets/soa-example.png)<!-- width=350px -->
@@ -298,10 +384,6 @@ Links zum Testen:
 https://httpbin.org
 
 https://api.predic8.de
-
-
-Link zum Registrieren der Mailadresse für den Amazon-Cloud-Service für nächste Woche im Backstage
-https://backstage.dhge.de/course/view.php?id=2718
 
 
 # Cloud Computing
@@ -531,3 +613,107 @@ $dbtilde{f}(z_{2}, param{3})= y$
 
 Begriff des Deep-Learnings kommt daher, dass bei der Konstruktion viele versteckte Schichten verwendet werden. 
 Die verschiedenen Layer ermöglichen den Einsatz verschiedener Features/Funktionen. 
+
+# Docker
+Ergänzungen aus OneNote hier einfügen...
+
+**Vorteile**
+- Ressourcen schonend
+- gut erweiterbar
+
+**Nachteile**
+- Lernkurve (Erlernen von Docker-File-Erstellung usw.)
+- Dokumentation nach Entwicklung (Ändern, speichern, committen) kann u.U. nicht zum Inhalt passen
+
+# Blockchain und Verschlüsselung
+
+## Hashing
+
+- **Hashfunktion** = Zuordnung von beliebig großen Eingabemenge (Schlüssel, beliebig langer String) auf eine kleinere Zielmenge fester Länge (Hashwerte)
+- Hashwerte sind einfach zu berechnen
+- Umkehroperation sehr komplex (Rekonstruktion der Eingabe unmöglich)
+
+**Algorithmen**
+
+- SHA256: Secure Hashing Algorithm
+- MD1: Message Digest 1 (veraltet!)
+- MD5: Message Digest 5 (veraltet!)
+- 
+
+**Anwendung**
+
+- Speichern von Passwörtern
+- Integrität von Dateien sicherstellen
+
+
+### Hashes knacken
+
+- Bruteforce $\rightarrow$ sehr rechenintensiv (eventuell Versuche begrenzt)
+- Speichereffiziente Umkehroperation über **Rainbow-Table** (aufwendig vorher viele mögliche Hashes berechnen)
+- Wird durch Salting (Erweitern der Zeichenfolge) verhindert
+
+## Verschlüsselung
+
+- **symmetrische Verschlüsselung:** gleicher Schlüssel zum ver- und entschlüsseln
+  - schnell, effizient durch Hardwarebeschleunigung ausführbar
+- **asymmetrische Verschlüsselung:** privater und öffentlicher Schlüssel (meist für Entschlüsseln / Verschlüsseln)
+  - z.B. End-to-End verschlüsselte Chat-Programme, PGP, Digitale Signaturen
+  - $\rightarrow$ Dateien/Nachrichten die mit dem öffentlichen Schlüssel verschlüsselt werden, können nur noch mit dem privaten 
+	Schlüssel entschlüsselt werden
+	- Ransomware (Verschlüsselungsangriffe) nutzen genau das aus
+
+### Digitale Signaturen
+
+- Kombination aus Hash und Signatur $\rightarrow$ Absicherung von Authentizität
+- Erstellung: Hashwert der Nachricht berechnen $\rightarrow$ Hash mit privatem Schlüssel verschlüsseln (= Signatur)
+- Übertragen wird die Nachricht zusammen mit dem verschlüsselten Hashwert
+- Absicherung: Hash mit öffentlichem Schlüssel entschlüsseln $\rightarrow$ Hashwert der Nachricht selbst berechnen und mit dem Entschlüsselten vergleichen
+- privater und öffentlicher Schlüssel besitzen dabei umgekehrte Funktionalität
+
+**Ablauf**
+1. Hash-Wert wird gebildet
+2. Hash-Wert wird mit **private Key** verschlüsselt
+3. TXT mit verschlüsseltem HASH übertragen
+4. verschlüssleter Hash-Wert mit **public Key** entschlüsselt
+5. passt dieser HASH zum übertragenen Text? 
+
+### Digitale Zertifikat
+
+- wird benötigt um zu garantieren, dass ein öffentlicher Schlüssel von einer bestimmten Quelle stammt
+- wird öffentlicher Schlüssel durch Mittelsmann manipuliert, wird die verschlüsselte Nachricht für diesen lesbar
+- digitale Signatur = Unterschrift $\rightarrow$ digitales Zertifikat = Personalausweis
+- öffentlicher Schlüssel ist echt, wenn er durch andere Instanz (= Vertrauenswürdigkeit bestätigt durch übergeordnete Instanz) bestätigt wird $\rightarrow$ Baumstruktur
+
+## Blockchain
+
+- Blockchain = kontinuierliche erweiterbare Verknüpfung von Datensätzen (= Blöcke)
+- jeder Block beinhaltet Transaktionsdaten und den Hashwert des vorhergehenden Blocks
+- Reihenfolge und Inhalt der Blöcke durch Hashwerte nicht manipulierbar
+- Anwendung in Bereichen, in denen Rückverfolgbarkeit und Sicherheit nötig ist
+
+### Bitcoin (Kryptowährungen)
+
+- Blockchain ist die zentrale Technologie hinter vielen Kryptowährungen wie Bitcoin
+- Verteilung der Blockchain in einem Peer-to-Peer Netzwerk (jeder Peer besitzt vollständige Kopie, vgl. dezentrale Datenbank)
+- Miner fassen Transaktionen zu Blöcken zusammen und propagieren diese im Peer-to-Peer Netzwerk
+- Damit ein Block akzeptiert wird, muss dieser einen Hash besitzen, der zu einem bestimmten Teil mit dem ursprünglichen Hash des Blocks übereinstimmt (quasi 1 Hash gebildet vom ursprünglichen Block $\rightarrow$ an Block angehängt, dann wird eine Information angehängt und das Paket wieder neu gehasht $\rightarrow$ dieser "Gesamt" Hash muss den alten Hash beinhaltet/bzw. übereinstimmt) (= Mining-Schwierigkeit, sehr rechenintensiv)
+- $\rightarrow$ wenn man manipulieren wöllte, müsste man die ganze Kette neu-hashen $\rightarrow$ Sicherheit
+- Anpassung des Schwierigkeitsgrad des Minings erfolgt alle zwei Wochen (je mehr Peers, umso schwieriger wird das Mining)
+- diejenige Node die zuerst einen Block mit einem passenden Hash generiert und der vom Netzwerk validiert wird, wird mit 'neuen' Bitcoin belohnt (Belohnung halbiert sich alle 4 Jahre)
+- Neue Blöcke werden etwa alle 10 Minuten erzeugt
+
+> Bitcoin ermöglicht es kryptografisch gesicherte, direkte Transaktionen ohne zentrale Vermittler in einem dezentralen Peer-to-Peer Netzwerk durchzuführen
+
+**Vorteile**
+
+- dezentral, unabhängig von Zentralbanken
+- sicherer Wertspeicher (maximale Anzahl von BTC begrenzt)
+- freie weltweite Transaktionen, ohne Sanktionen und hohe Transaktionskosten (stimmt nicht ganz, für jede Transaktion gibt es GAS Fees)
+
+**Nachteile**
+
+- hohe Eigenverantwortung der Nutzer (ohne Private-Key kein Zugriff auf Wallet)
+- irreversible Transaktionen (Diebstahl, ...)
+- legt alle Transaktionen offen (Nachverfolgbarkeit vs. Privatsphäre)
+- Nutzung für illegale Transaktionen möglich (Silk Road, ...)
+- hoher Stromverbrauch des verbreiteten Mining-Algorithmus (bei Proof of Work)

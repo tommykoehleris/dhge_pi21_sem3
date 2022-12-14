@@ -1,4 +1,4 @@
-<!----------
+﻿<!----------
 title: "Systemanalyse"
 date: "Semester 3"
 keywords: [Systemanalyse, DHGE, Semester 3]
@@ -11,14 +11,15 @@ Systemanalyse
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Inhaltsverzeichnis**
 
-- [Einführung / Überblick](#einf%C3%BChrung--%C3%BCberblick)
+- [Systemanalyse](#systemanalyse)
+- [Einführung / Überblick](#einführung--überblick)
   - [User Story Format](#user-story-format)
-  - [Was gehört alles zur Systemanalyse?](#was-geh%C3%B6rt-alles-zur-systemanalyse)
-- [Regeln für Software-Entwicklung](#regeln-f%C3%BCr-software-entwicklung)
+  - [Was gehört alles zur Systemanalyse?](#was-gehört-alles-zur-systemanalyse)
+- [Regeln für Software-Entwicklung](#regeln-für-software-entwicklung)
   - [(1) Klartext](#1-klartext)
     - [Wasserfallmodell](#wasserfallmodell)
     - [Agil](#agil)
-  - [(2) Gründliche Vertragsgestaltung](#2-gr%C3%BCndliche-vertragsgestaltung)
+  - [(2) Gründliche Vertragsgestaltung](#2-gründliche-vertragsgestaltung)
     - [Wasserfallmodell](#wasserfallmodell-1)
     - [Agil](#agil-1)
   - [(3) Wandelnde Anforderungen: Wie gehe ich damit um?](#3-wandelnde-anforderungen-wie-gehe-ich-damit-um)
@@ -27,10 +28,10 @@ Systemanalyse
   - [Vorgehensmodelle](#vorgehensmodelle)
     - [Phasenmodell](#phasenmodell)
     - [Iteriertes Phasenmodell](#iteriertes-phasenmodell)
-    - [Evolutionäre SW-Entwicklung](#evolution%C3%A4re-sw-entwicklung)
+    - [Evolutionäre SW-Entwicklung](#evolutionäre-sw-entwicklung)
     - [Spiralen Modell](#spiralen-modell)
     - [V-Modell](#v-modell)
-    - [Eine Ausprägung des V-Modells: "V-Modell XT"](#eine-auspr%C3%A4gung-des-v-modells-v-modell-xt)
+    - [Eine Ausprägung des V-Modells: "V-Modell XT"](#eine-ausprägung-des-v-modells-v-modell-xt)
     - [Extreme Programming (XP)](#extreme-programming-xp)
 - [SCRUM](#scrum)
   - [Empirische Prozess Kontrolle](#empirische-prozess-kontrolle)
@@ -49,7 +50,7 @@ Systemanalyse
     - [Definition of Done](#definition-of-done)
     - [DoR: Definition of Ready](#dor-definition-of-ready)
   - [SCRUM-Manifest](#scrum-manifest)
-    - [Häufige / gern gemachte Fehler bezüglich des Manifests](#h%C3%A4ufige--gern-gemachte-fehler-bez%C3%BCglich-des-manifests)
+    - [Häufige / gern gemachte Fehler bezüglich des Manifests](#häufige--gern-gemachte-fehler-bezüglich-des-manifests)
   - [Vor- und Nachteile von SCRUM](#vor--und-nachteile-von-scrum)
   - [SCRUM-Ban als SCRUM Derivat](#scrum-ban-als-scrum-derivat)
 - [Story Board](#story-board)
@@ -59,30 +60,31 @@ Systemanalyse
   - [4 Prozess-Schritte](#4-prozess-schritte)
   - [Hinweise](#hinweise)
 - [Requirement Engineering / Aufwandsanalyse](#requirement-engineering--aufwandsanalyse)
-  - [Aufwandsschätzung](#aufwandssch%C3%A4tzung)
+  - [Aufwandsschätzung](#aufwandsschätzung)
     - [LOC (Lines of Code) als Basis im klassischen Fall](#loc-lines-of-code-als-basis-im-klassischen-fall)
     - [weitere Faktoren](#weitere-faktoren)
     - [Magisches Dreieck / Teufelsquadrat](#magisches-dreieck--teufelsquadrat)
-  - [Empirische Schätzung](#empirische-sch%C3%A4tzung)
-    - [Expertenschätzung](#expertensch%C3%A4tzung)
+  - [Empirische Schätzung](#empirische-schätzung)
+    - [Expertenschätzung](#expertenschätzung)
     - [Delphi-Methode](#delphi-methode)
     - [Divide et Impera (Teile und Hersche)](#divide-et-impera-teile-und-hersche)
     - [SCRUM-Poker](#scrum-poker)
     - [High-Low-Showdown](#high-low-showdown)
-  - [Algorithmische Schätzverfahren](#algorithmische-sch%C3%A4tzverfahren)
+  - [Algorithmische Schätzverfahren](#algorithmische-schätzverfahren)
     - [COCOMO](#cocomo)
+    - [COCOMO $II$ $\\copyright$ Boehm](#cocomo-ii-copyright-boehm)
     - [Function-Point-Methode](#function-point-methode)
 - [Objektorientierung](#objektorientierung)
-  - [Überblick](#%C3%BCberblick)
+  - [Säulen der Objektorientierung](#säulen-der-objektorientierung)
+  - [Überblick](#überblick)
     - [UML: Unified Modelling Language](#uml-unified-modelling-language)
     - [Diagramme](#diagramme)
-    - [Eigenschaften der Objektorientierung](#eigenschaften-der-objektorientierung)
   - [Klassendiagramm](#klassendiagramm)
   - [Objekt-Diagramm](#objekt-diagramm)
   - [Klassen-Diagramm mit Assoziationen](#klassen-diagramm-mit-assoziationen)
   - [Verhaltensdiagramme](#verhaltensdiagramme)
   - [Zustandsdiagramme](#zustandsdiagramme)
-  - [Aktivitätsdiagramm](#aktivit%C3%A4tsdiagramm)
+  - [Aktivitätsdiagramm](#aktivitätsdiagramm)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -551,7 +553,8 @@ Angenommen ... <Vork.> wenn ... <Aktion> dann ... <Ergebnis>
 - muss eine "Brücke" zwischen Business und Development herstellen
 - muss ROI (Return of Investment) gewährleisten
 - ist die Schnittstelle zum Kunden -> muss die Kundenbedürfnisse verstehen und einordnen
-- **Value:** muss Kriterien für den Value definieren und ihn erhöhen -> Was? Warum?
+- **Value:** muss Kriterien für den Value definieren und ihn erhöhen -> Was? Warum? 
+$\rightarrow$ i.d.R. in T-Shirt Größen S, M, L, XL usw.
 - ist für Sprint Reviews verantwortlich
 - muss Backlog Prioritäten setzen
 
@@ -975,7 +978,7 @@ $\Rightarrow$ **Achtung**: Aufwand für das Zusammenführen beachten!
 $\Rightarrow$ d.h. Story-Points
 
 - Kategorien werden angestrebt
-- Basis wird festgelegt, i.d.R. mit 1 Story Point
+- Basis (Referenzaufgabe) wird festgelegt, i.d.R. mit 1 Story Point
 - Spaßfaktor $\Rightarrow$ Teamgeist
 - i.d.R. für $7 \pm 2\,\mathrm{MA}$ konzipiert
 - Kartenset (Kartenwert von unten aus meist Fibonacci, höher dann gröber)
@@ -997,25 +1000,33 @@ $\Rightarrow$ d.h. Story-Points
 4. Minimal + Maximal begründen ihre Wahl
    
    *alle* Anderen haben Redeverbot
+   $\rightarrow$ Schätzung immer besser und näher am tatsächlichen Wert
+   
 5. zurück zu 2. $\rightarrow$ i.d.R. maximal 2 Iterationen
 
 > bei Einigkeit nach 3. kann direkt zur nächsten Aufgabe gesprungen werden (also 1.)
 
-**Eigenschaften**
+**Eigenschaften/Vorteile:**
 
-1. Teams sind besser als Experten (i.d.R.)
-2. Diversität in Gruppen wird benötigt
+- **Teams sind besser als Experten (i.d.R.)**
+- Publikums-Frage wird zu 95% richtig beantwortet
+- **keine $\alpha$-Tier-Meinungen in der Schätzung**
+- keine Autoritäts-Meinungen dabei
+- alle sind mit im Boot $\Rightarrow$ Engagement
+- keine Planung sondern Schätzung!
+- nur Debatten bei unterschiedlichen Meinungen
+- alle haben eine Stimme
+- **viel Kommunikation $\rightarrow$ Wissenstransfer**
+- Story-Points pro Mitarbeiter abbildbar, keine Zeit Schätzung
 
-   $\rightarrow$ je unterschiedlicher das Wissen in der Gruppe, desto smarter ist die Gruppe
+**Nachteile:**
 
-3. Publikums-Frage wird zu 95% richtig beantwortet
-4. keine $\alpha$-Tier-Meinungen in der Schätzung
-5. keine Autoritäts-Meinungen dabei
-6. alle sind mit im Boot $\Rightarrow$ Engagement
-7. zeitaufwendig
-8. keine Planung sondern Schätzung!
-9. nur Debatten bei unterschiedlichen Meinungen
-10. alle haben eine Stimme
+- **zeitaufwändig**
+- **keine Stunden/Zeit-Schätzung**
+- fähiger Scrum-Master notwendig
+- für Team ohne Fachwissen nutzlos
+- **Diversität in Gruppen wird benötigt**
+$\rightarrow$ je unterschiedlicher das Wissen in der Gruppe, desto smarter ist die Gruppe
 
 ### High-Low-Showdown
 
@@ -1089,7 +1100,18 @@ Präzisierung der Schätzung:
 - Unternehmensspezifische Kostenfaktoren
 - Projektspezifische Kostenfaktoren
 
+### COCOMO $II$ $\copyright$ Boehm
+
+$MM=2,45\cdot(\frac{LOC}{1000})^{(Skalierungsfaktoren)}$
+
 $MM_{korrigiert}=K_u \cdot K_p \cdot MM$
+
+**Einflussfaktoren**
+- Skalierungsfaktoren
+- Flexibilität
+- Team
+- Technologie
+- Risiko
 
 **Kostentreiber**
 - Zuverlässigkeit
@@ -1150,14 +1172,41 @@ Funktion Point Roh-Wert wird mit dieser Tabelle verrechnet und führt so zum Ges
 $Function Points = FP_{Roh}* Korrekturfaktoren$
 
 - Bis zu 14 Einflussfaktoren als Korrekturfaktoren:
-
+  
 > **Achtung!** falls Aufwand pro Funktion-Point bekannt $\Rightarrow$ Aufwand "berechenbar"
-
 - Beispiel Faustregel von Jones:
   - $MM=FP^{0.4}=\sqrt[5]{FP^2}\hat{=}t$
   - $Anzahl_{MA}=\frac{FP}{150}$
 
+**Vorteile**
+- als Funktions-Vergleichs-Methode missbrauchbar
+
+**Nachteile**
+- unagil
+- nicht einfach additiv, Wie viel ein Funktion-Point wert ist, ist pro Projekt unterschiedlich
+
 # Objektorientierung
+
+## Säulen der Objektorientierung
+
+- Klasse:
+  - Bauplan für Datensammlung und Funktionen für deren Bearbeitung
+- Objekt:
+  - Instanz einer Klasse
+  - konkrete Ausprägung des Bauplans
+- **Kapselung**:
+  - Begrenzung des Zugriffs auf Klassen
+  - `public`,`private`, `protected`, ...
+  - Vorteil davon:
+    - von außen versehentliches schreiben unmöglich 
+    - feste Schittstellen nach außen, ermöglicht ändern des Inneren der Funktion ohne nach außen alles verändern zu müssen
+- **Vererbung**:
+  - Klassen können auf Basis anderen Klassen erstellt werden
+  - diese neuen Klassen enthalten (`erben`) dann die Eigenschaften und Methoden der ursprünglichen Klasse
+  - Vorteil: Funktionen über Klassen hinweg verwendbar
+- **Polymorphismus**:
+  - Typ des Objektes entscheidet sich erst zur Laufzeit anhand der übergebenen Parameter
+    - z.B. ein Objekt von einer Kind-Klasse übergeben wird und die Funktion der Vaterklasse aufgerufen wird, wird automatisch geschaut ob die Kind-Klasse diese Funktion auch enthält, falls ja, wird diese ausgeführt 
 
 ## Überblick
 
@@ -1165,11 +1214,13 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
 
 - an sich keine wirkliche "Sprache", eher Form der Visualisierung
 - verwendet für:
-   - Spezifikation ... $+/-$
+   - Spezifikation ... $+/-$ (
+     - $+$ empfehlenswert wenn Sprache klar
+     - $-$ Sprachenabhängigkeit
    - Konstruktion ... $-$
      - eher nicht geeignet, da die Umsetzung außer Acht gelassen wird
    - Visualisierung ... $+$ (wenn automatisch generiert)
-   - Dokumentation ... $+$ (wenn automatisch generiert)
+   - Dokumentation ... $+$ (wenn automatisch generiert, z.B. doxygen)
 - Eigenschaft: nicht eindeutige Darstellung $\Rightarrow$ Begleit-Text wird notwendig
 
 ### Diagramme
@@ -1178,32 +1229,16 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
   - Objekt
   - Paket
   - Komponente
-  - Deployment
+  - Deployment-Diagramm
 - Verhaltensdiagramme
   - Zustand
   - Aktivität
   - Interaktion
     - Sequenz
     - Kommunikation
-  - Use Case
+  - Use- Case-Diagramm
 
 ![Überblick UML-Diagrammtypen](assets/uml-diagrams.png)<!-- width=500px -->
-
-### Eigenschaften der Objektorientierung
-
-- Klasse:
-  - Bauplan für Datensammlung und Funktionen für deren Bearbeitung
-- Objekt:
-  - Instanz einer Klasse
-  - konkrete Ausprägung des Bauplans
-- Kapselung:
-  - Begrenzung des Zugriffs auf Klassen
-  - `public`,`private`, `protected`, ...
-- Vererbung:
-  - Klassen können auf Basis anderen Klassen erstellt werden
-  - diese neuen Klassen enthalten (`erben`) dann die Eigenschaften und Methoden der ursprünglichen Klasse
-- Polymorphismus:
-  - Typ des Objektes entscheidet sich erst zur Laufzeit anhand der übergebenen Parameter
 
 ## Klassendiagramm
 
@@ -1221,6 +1256,7 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
       - z.B. `name: string`
     - zusätzlich noch mit `+` für `public` oder `-` für `private`, `#` für `protected` markieren
     - statische Variablen werden unterstrichen
+    - Kommentare gestrichelte Verbindung
   - darunter noch die Methoden der Klasse
   - in UML noch umfassende Kennzeichnung als Klassendiagramm (optional)
 - Tooling: [Plant UML](https://planttext.com)

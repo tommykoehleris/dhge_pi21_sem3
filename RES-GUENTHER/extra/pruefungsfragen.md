@@ -91,7 +91,7 @@ for ((i = 1; i <= $#; i++ )); do printf '%s\n' "Arg $i: ${!i}" done
 - Was sind die Vorteile eines Skripts gegenüber interaktiver Konfiguration
   - einheitliche Konfiguration, kein versehentliches Ändern
   - Automatisierung möglich
-- was sind Kontingente und warum sind sie notwendig?
+- Was sind Kontingente und warum sind sie notwendig?
   - Kontingente: logische Speicher-Begrenzungen für Ordner
   - verhindert übermäßige Nutzung durch Programme und Nutzer, damit System weiter arbeiten kann
 
@@ -99,7 +99,7 @@ Teil 2:
 
 - Browser zeigt "Unable to connect" --> was tun?
   - physische Verbindung prüfen
-  - IP-Konfiguration prüfen
+  - IP-Konfiguration prüfen (Welches System vergibt IP Adressen? $\rightarrow$ DHCP)
     - Windows: ``ipconfig``
     - Linux: ``ip a`` oder ``ifconfig``
   - Ping zu verlässlichem Server
@@ -107,3 +107,46 @@ Teil 2:
   - Proxy-Einstellungen prüfen
     - Linux: ``/etc/environment``
 - Was sind Elemente einer Firewall-Regel? (alternativ zu: erstellen Sie eine Firewall-Regel)
+
+# Erweiterung des Katalogs
+
+- Was kann man mit Firewall-Regeln machen?
+  - aktivieren/deaktivieren
+  - erstellen/löschen
+  - ändern
+  - Beispiel 1 für Firewall Regel: FTP sei erlaubt/ICMP Anfragen erlauben
+  - Beispiel 2: ssh Verbindungen zulassen
+- Was sind Nachteile einer Virtuellen Maschine?
+  - Leistung schlechter im Vergleich zum nativen System
+- Was sind Vorteile einer virtuellen Maschine?
+  - ungefährliches Testen von Software in einer Sandbox-Umgebung
+  - einfaches vervielfältigen der Maschinen
+  - Skalierbarkeit
+- ``sudo telnet telehack.com`` Was ist der Parameter und was das Kommando?
+  - Parameter: ``telnet telehack.com``
+  - Kommando: ``sudo``
+- Wie ist ein Betriebssystem definiert?
+  - DIN 44300: Die Programme eines digitalen Rechnersystems , die zusammen mit den Eigenschaften dieser Rechenanlage die Basis der möglichen Betriebsarten des digitalen Rechnersystems bilden und die insbesondere die Abwicklung von Programmen steuern und überwachen.
+- Was ist ein Ping?
+  - ping = Netzwerkdiagnosetool
+  - sendet ICMP-Paket über Port 9
+  - Layer 3 Protokoll (Vermittlungsschicht/Internet Layer)
+- Was sind die 5 wichtigsten Rechnerkomponenten?
+  - Speicherwerk
+  - Rechenwerk
+  - Steuerwerk
+  - Eingabewerk
+  - Ausgabewerk
+- Unterschied Havard und Von-Neumann Architektur?
+  - Havard --> Speicher statt Speicherwerk
+- Was ist der Flaschenhals bei Von-Neumann Architektur?
+  - das BUS-System über welches alle Komponenten verbunden sind
+- Was ist das EVA-Prinzip?
+  - Eingabe-Verarbeitung-Ausgabe
+  - Grundprinzip aller Rechner
+- Erläutern Sie wie der Pfad hinter dem Shebang in einem Skript ermittelt wird und zeigen Sie ein Beispiel?
+  - ``where is`` ``find`` ``which`` verwenden, um den Ort des gewünschten Interpreters zu finden
+  - Beispiel: ``which mc`` Wo ist das Programm ``mc`` ?
+  - Beispiel: ``which bash`` Wo ist das Programm ``batch`` ?
+- Wie Filtere ich mit ``ls`` ?
+  - ``ls ba*`` für Ergebnisse welche mit "ba" beginnen
