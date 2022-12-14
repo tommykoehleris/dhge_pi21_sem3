@@ -75,10 +75,10 @@ Systemanalyse
     - [COCOMO $II$ $\\copyright$ Boehm](#cocomo-ii-copyright-boehm)
     - [Function-Point-Methode](#function-point-methode)
 - [Objektorientierung](#objektorientierung)
+  - [Säulen der Objektorientierung](#säulen-der-objektorientierung)
   - [Überblick](#überblick)
     - [UML: Unified Modelling Language](#uml-unified-modelling-language)
     - [Diagramme](#diagramme)
-    - [Eigenschaften der Objektorientierung](#eigenschaften-der-objektorientierung)
   - [Klassendiagramm](#klassendiagramm)
   - [Objekt-Diagramm](#objekt-diagramm)
   - [Klassen-Diagramm mit Assoziationen](#klassen-diagramm-mit-assoziationen)
@@ -1174,12 +1174,39 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
 - Bis zu 14 Einflussfaktoren als Korrekturfaktoren:
   
 > **Achtung!** falls Aufwand pro Funktion-Point bekannt $\Rightarrow$ Aufwand "berechenbar"
-
 - Beispiel Faustregel von Jones:
   - $MM=FP^{0.4}=\sqrt[5]{FP^2}\hat{=}t$
   - $Anzahl_{MA}=\frac{FP}{150}$
 
+**Vorteile**
+- als Funktions-Vergleichs-Methode missbrauchbar
+
+**Nachteile**
+- unagil
+- nicht einfach additiv, Wie viel ein Funktion-Point wert ist, ist pro Projekt unterschiedlich
+
 # Objektorientierung
+
+## Säulen der Objektorientierung
+
+- Klasse:
+  - Bauplan für Datensammlung und Funktionen für deren Bearbeitung
+- Objekt:
+  - Instanz einer Klasse
+  - konkrete Ausprägung des Bauplans
+- **Kapselung**:
+  - Begrenzung des Zugriffs auf Klassen
+  - `public`,`private`, `protected`, ...
+  - Vorteil davon:
+    - von außen versehentliches schreiben unmöglich 
+    - feste Schittstellen nach außen, ermöglicht ändern des Inneren der Funktion ohne nach außen alles verändern zu müssen
+- **Vererbung**:
+  - Klassen können auf Basis anderen Klassen erstellt werden
+  - diese neuen Klassen enthalten (`erben`) dann die Eigenschaften und Methoden der ursprünglichen Klasse
+  - Vorteil: Funktionen über Klassen hinweg verwendbar
+- **Polymorphismus**:
+  - Typ des Objektes entscheidet sich erst zur Laufzeit anhand der übergebenen Parameter
+    - z.B. ein Objekt von einer Kind-Klasse übergeben wird und die Funktion der Vaterklasse aufgerufen wird, wird automatisch geschaut ob die Kind-Klasse diese Funktion auch enthält, falls ja, wird diese ausgeführt 
 
 ## Überblick
 
@@ -1187,11 +1214,13 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
 
 - an sich keine wirkliche "Sprache", eher Form der Visualisierung
 - verwendet für:
-   - Spezifikation ... $+/-$
+   - Spezifikation ... $+/-$ (
+     - $+$ empfehlenswert wenn Sprache klar
+     - $-$ Sprachenabhängigkeit
    - Konstruktion ... $-$
      - eher nicht geeignet, da die Umsetzung außer Acht gelassen wird
    - Visualisierung ... $+$ (wenn automatisch generiert)
-   - Dokumentation ... $+$ (wenn automatisch generiert)
+   - Dokumentation ... $+$ (wenn automatisch generiert, z.B. doxygen)
 - Eigenschaft: nicht eindeutige Darstellung $\Rightarrow$ Begleit-Text wird notwendig
 
 ### Diagramme
@@ -1200,32 +1229,16 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
   - Objekt
   - Paket
   - Komponente
-  - Deployment
+  - Deployment-Diagramm
 - Verhaltensdiagramme
   - Zustand
   - Aktivität
   - Interaktion
     - Sequenz
     - Kommunikation
-  - Use Case
+  - Use- Case-Diagramm
 
 ![Überblick UML-Diagrammtypen](assets/uml-diagrams.png)<!-- width=500px -->
-
-### Eigenschaften der Objektorientierung
-
-- Klasse:
-  - Bauplan für Datensammlung und Funktionen für deren Bearbeitung
-- Objekt:
-  - Instanz einer Klasse
-  - konkrete Ausprägung des Bauplans
-- Kapselung:
-  - Begrenzung des Zugriffs auf Klassen
-  - `public`,`private`, `protected`, ...
-- Vererbung:
-  - Klassen können auf Basis anderen Klassen erstellt werden
-  - diese neuen Klassen enthalten (`erben`) dann die Eigenschaften und Methoden der ursprünglichen Klasse
-- Polymorphismus:
-  - Typ des Objektes entscheidet sich erst zur Laufzeit anhand der übergebenen Parameter
 
 ## Klassendiagramm
 
@@ -1243,6 +1256,7 @@ $Function Points = FP_{Roh}* Korrekturfaktoren$
       - z.B. `name: string`
     - zusätzlich noch mit `+` für `public` oder `-` für `private`, `#` für `protected` markieren
     - statische Variablen werden unterstrichen
+    - Kommentare gestrichelte Verbindung
   - darunter noch die Methoden der Klasse
   - in UML noch umfassende Kennzeichnung als Klassendiagramm (optional)
 - Tooling: [Plant UML](https://planttext.com)
