@@ -1,6 +1,8 @@
 # DHGE - Praktische Informatik - Matrikel 21 - Semester 3
 
-Dieses Repository ist ein Projekt von Studierenden des Studiengangs "Praktische Informatik" der Dualen Hochschule Gera-Eisenach. Hier werden alle Mitschriften der einzelnen Modulen gesammelt. Die Skripte liegen im `markdown`-Format vor. Zur besseren Handhabung (und weil Github nur begrenzte `markdown`-Features bereitstellt) werden diese zusätzlich automatisch in PDFs umgewandelt und zur Verfügung gestellt.
+Dieses Repository ist ursprünglich aus dem Matrikel 19 geforked und wieder zum laufen gebracht worden.
+
+Es entstand aus dem Studiengang "Praktische Informatik" der Dualen Hochschule Gera-Eisenach. Hier habe ich Mitschriften gesammelt und erweitert. Die Skripte liegen im `markdown`-Format vor. Zur besseren Handhabung (und weil Github nur begrenzte `markdown`-Features bereitstellt) werden diese zusätzlich automatisch in PDFs umgewandelt und zur Verfügung gestellt.
 
 ## Module
 
